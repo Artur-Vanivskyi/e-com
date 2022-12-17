@@ -7,6 +7,7 @@ import {
 } from "../../utils/firebase/firebase.utils";
 import FormInput from "../form-input/form-input.component";
 
+
 const SignUpForm = () => {
   const defaultFormFirleds = {
     displayName: "",
@@ -17,8 +18,7 @@ const SignUpForm = () => {
 
   const [formFields, setFormFirled] = useState(defaultFormFirleds);
   const { displayName, email, password, confirmPassword } = formFields;
-
-  //   console.log(formFields)
+  
 
   const resetFormFields = () => {
     setFormFirled(defaultFormFirleds);
@@ -39,7 +39,7 @@ const SignUpForm = () => {
         email,
         password
       );
-
+      
       await createUserDocumentFromAuth(user, { displayName });
       resetFormFields();
     } catch (error) {
@@ -61,7 +61,7 @@ const SignUpForm = () => {
 
   return (
     <div className="sign-up-container">
-        <h2>Don't have an account?</h2>
+      <h2>Don't have an account?</h2>
       <span>Sign up with your email and password</span>
       <form onSubmit={handleSubmit}>
         <FormInput

@@ -32,7 +32,6 @@ To install and run the E-Commerce website locally, follow these steps:
 3. Install the required dependencies.
 - npm install
 4. Create a Firebase project and set up Firebase Authentication and the Firestore database.
-
 5. Create a `.env` file in the project directory with the following variables.
 6. Start the development server.
 7. Navigate to `http://localhost:3000` in your web browser.
